@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import Footer from "./components/Footer";
 
-function App() {
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import StayProductive from "./components/StayProductive";
+import Subscribe from "./components/Subscribe";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+      <main>
+        <Hero />
+        <StayProductive />
+        <Subscribe />
+      </main>
+      <Footer />
+    </Container>
   );
 }
 
-export default App;
+const Container = styled.div`
+  max-width: 1440px;
+  margin: 0 auto;
+`;
